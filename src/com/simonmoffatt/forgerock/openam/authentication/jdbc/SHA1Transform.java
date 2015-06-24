@@ -7,7 +7,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * A very simple test implementation of the JDBC Password Syntax Transform.
+ * A very simple implementation of the JDBC Password Syntax Transform what generates a SHA1 hash of a clear text input
  */
 public class SHA1Transform implements com.sun.identity.authentication.modules.jdbc.JDBCPasswordSyntaxTransform {
 
@@ -15,11 +15,10 @@ public class SHA1Transform implements com.sun.identity.authentication.modules.jd
 	}
 
 	/**
-	 * This simply returns the clear text format of the password.
+	 * This simply returns the SHA1 hash of the input
 	 * 
-	 * @param input
-	 *            Password before transform
-	 * @return Password after transform in this case the same thing.
+	 * @param input Password before transform
+	 * @return Password after transform in this case, a SHA1 hash
 	 * @throws AuthLoginException
 	 */
 
